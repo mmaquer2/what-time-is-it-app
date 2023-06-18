@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# What Time Is It App ?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What is this?
+- this is a single page app that displays the current date and time
 
-## Available Scripts
+## Why is this?
+- this is a simple boilerplate react app to practice devops skills
 
-In the project directory, you can run:
+## How to use this?
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Development and Installation
 
-### `npm test`
+```bash
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# install dependencies
+npm i .
 
-### `npm run build`
+# start app
+npm run start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# build app
+npm run build
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# run tests
+npm run test
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+## Deployment Methods:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Surge.sh 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# install surge
+npm i -g surge
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# build app
+npm run build
 
-## Learn More
+# deploy app
+surge ./build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Gitlab Pages:
 
-### Code Splitting
+```bash
+## step 1: create gitlab repo
+## step 2: create gitlab ci file
+## step 3: push code to gitlab repo
+## step 4: go to gitlab repo settings and enable pages
+## step 5: go to gitlab repo settings and enable ci
+## step 6: go to gitlab repo settings and enable shared runners
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Docker !
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+```bash
+# build the image with docker compose
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+docker-compose build
 
-### Advanced Configuration
+# run the image with docker compose
+docker-compose up
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```

@@ -1,22 +1,25 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+const { DateTime } = require("luxon");
 
 function App() {
+
+  const [currentTime, setCurrentTime] = useState("");
+  
+
+  useEffect(() => {  
+    const dt = DateTime.local();  
+    const currentDate = dt.toLocaleString(DateTime.DATETIME_HUGE);
+    setCurrentTime(currentDate);
+
+  }, []);
+ 
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h2>What Time is it?</h2>
+        <p>{currentTime}</p>
       </header>
     </div>
   );

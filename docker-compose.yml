@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: what-time-is-it-dev-app
+    image: what-time-is-it-dev-app
+    build:
+      context: .
+    ports:
+      - 3000:3000
