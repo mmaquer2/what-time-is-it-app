@@ -1,13 +1,12 @@
 # What Time Is It App ?
 
 ## What is this?
-- this is a single page app that displays the current date and time
-
-## Why is this?
-- this is a simple boilerplate react app to practice devops skills
+- this is a simple boilerplate react app to practice devops skills that shows the current date and time
 
 ## How to use this?
 
+- the project is built around github actions ci/cd
+- github actions ci/cd
 
 
 ## Development and Installation
@@ -45,19 +44,16 @@ surge ./build
 
 ```
 
-### Gitlab Pages:
+### Github Pages
 
 ```bash
-## step 1: create gitlab repo
-## step 2: create gitlab ci file
-## step 3: push code to gitlab repo
-## step 4: go to gitlab repo settings and enable pages
-## step 5: go to gitlab repo settings and enable ci
-## step 6: go to gitlab repo settings and enable shared runners
+
+# build app
+
+
+# deploy app
+
 ```
-
-
-## Docker !
 
 
 ```bash
