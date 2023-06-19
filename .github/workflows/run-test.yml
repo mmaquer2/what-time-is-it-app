@@ -10,9 +10,9 @@ on:
 jobs:
   run-all-tests:
     runs-on: ubuntu-latest
-        steps:
-        - name: run app tests
-          run: echo "running what time is it tests..."
+    steps:
+      - name: run app tests
+        run: echo "running what time is it tests..."
 
 
 
