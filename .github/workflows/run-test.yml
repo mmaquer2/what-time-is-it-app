@@ -8,15 +8,23 @@ on:
     branches: [ main ]
 
 jobs:
-  run-all-tests:
+  tests:
     runs-on: ubuntu-latest
     steps:
-      - name: run app tests
-        run: |
-            echo "running tests..."
-            pwd
-            npm install
-            npm run test
+      # Checkout the Repo
+      - uses: actions/checkout@v2
+
+      # Install Node 12
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      # Install dependencies
+      - run: npm install
+
+      # Run tests
+      - run: npm test
 
 
     
