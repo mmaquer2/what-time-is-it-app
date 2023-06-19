@@ -15,6 +15,7 @@ jobs:
         run: |
             echo "running tests..."
             pwd
+            npm install
             npm run test
 
 
