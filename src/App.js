@@ -18,8 +18,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2>What Time is it?</h2>
-        <p>{currentTime}</p>
+        <h2 data-testid="time-label">What Time is it?</h2>
+        <p data-testid="time-text-display">{currentTime}</p>
       </header>
     </div>
   );
