@@ -58,6 +58,7 @@ surge ./build
 
 ```
 
+### Docker
 
 ```bash
 # build the image with docker compose
