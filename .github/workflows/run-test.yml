@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
         steps:
         - name: run app tests
-          script: echo "running what time is it tests..."
+          run: echo "running what time is it tests..."
 
 
 
