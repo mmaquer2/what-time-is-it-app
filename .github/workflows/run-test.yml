@@ -12,8 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run app tests
-        run: echo "running what time is it tests..."
-
+        script:
+          - |-
+          echo "running tests.."
+          npm run test
 
 
     
