@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run app tests
-        script:
-          - |-
-          echo "running tests.."
-          npm run test
+        run: |
+            echo "running tests..."
+            pwd
+            npm run test
 
 
     
