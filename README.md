@@ -31,6 +31,21 @@ npm run test
 
 ## Deployment Methods:
 
+
+### AWS Lightsail
+
+```bash
+
+# install aws cli
+
+# configure aws cli
+
+# build app
+
+# deploy app
+
+```
+
 ### Surge.sh 
 
 ```bash
