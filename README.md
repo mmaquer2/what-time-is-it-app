@@ -36,13 +36,43 @@ npm run test
 
 ```bash
 
-# install aws cli
+# update ubuntu packages
+sudo apt-get update
 
-# configure aws cli
 
-# build app
+# install nodejs
+sudo apt-get install nodejs
 
-# deploy app
+# install npm
+sudo apt-get install npm
+
+
+# clone github repo to /var/www dir, install dependencies, build app
+git --version # check if git is installed
+cd /var/www
+cd [Your Repository Name]
+sudo npm install
+sudo npm run build
+
+
+# install nginx
+sudo apt-get install nginx
+
+
+# configure nginx to serve static files from /var/www/build
+
+# using vim
+
+
+# deploy app by starting nginx
+sudo service nginx start
+
+# stop nginx or restart server
+sudo service nginx stop
+
+
+# setting up SSL with certbot
+sudo apt-get install certbot python3-certbot-nginx
 
 ```
 
