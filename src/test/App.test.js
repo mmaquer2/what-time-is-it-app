@@ -6,7 +6,7 @@ import App from '../App';
 test('App renders what time is it', () => {
   render(<App />);
   const element = screen.getByTestId("time-label")
-  expect(element.textContent).toBe('What Time is it?');
+  expect(element.textContent).toBe('What Time Is It?');
  
 });
 
