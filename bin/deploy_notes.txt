@@ -1,0 +1,97 @@
+# scp the files to the server
+scp -i <ssh_key_location> -r <local_dir> <user>@<server>:<remote_dir>
+
+# ssh to the server 
+ssh -i <ssh_key_location> <user>@<server>
+
+# update the server
+sudo apt-get update
+
+# install nginx
+sudo apt install nginx
+
+
+# verify ngnix 
+sudo nginx -t
+
+
+# enable ngnix on boot
+sudo systemctl start nginx
+sudo systemctl enable nginx
+
+# install nodejs and npm
+sudo apt install npm
+sudo apt install -y nodejs
+
+# verify installation 
+node -v
+npm -v
+
+
+### Copying the Project --->
+
+# Option 1: using SCP
+
+# leave the server or open another terminal
+
+# copy the react app to the server
+scp -i your-key.pem -r /path-to-your-local-react-app ubuntu@your-lightsail-instance-public-ip:/home/ubuntu/
+
+### Option 2: using git
+
+git clone https://github.com/mmaquer2/what-time-is-it-app.git
+
+git clone <your-react-app-repo>
+
+
+# cd into the project 
+cd /home/ubuntu/your-react-app
+
+# install dependencies
+npm install
+npm run build
+
+# configure nginx
+cd /etc/nginx/sites-available
+
+sudo nano your-app-name
+
+
+```
+server {
+    listen 80;
+    listen [::]:80;
+
+    root /home/ubuntu/what-time-is-it-app/build
+    index index.html;
+    
+}
+
+```
+
+## creating a user for nginx for linux
+sudo adduser mike 
+
+# add user to sudo group
+sudo adduser mike sudo
+
+
+
+
+# give permission to the nginx user
+sudo chmod -R 755 /home/ubuntu/what-time-is-it-app/build
+sudo chown -R root:www-data /home/ubuntu/what-time-is-it-app/build/
+
+
+# create a symbolic link
+sudo ln -s /etc/nginx/sites-available/time-app /etc/nginx/sites-enabled/time-app
+
+# verify nginx configuration
+sudo nginx -t
+
+sudo service nginx stop
+sudo service nginx start
+
+
+# check error logs
+sudo cat /var/log/nginx/error.log
